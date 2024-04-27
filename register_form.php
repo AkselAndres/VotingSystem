@@ -59,7 +59,7 @@
 <body>
     <div class="container">
         <h2>Registration Form</h2>
-        <form action="register.php" method="post"> <!-- Update form action to register.php -->
+        <form action="register.php" method="post"> 
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br>
             <label for="password">Password:</label><br>
@@ -68,7 +68,7 @@
             <input type="email" id="email" name="email" required><br>
             <button type="submit">Register</button>
         </form>
-        <!-- Add link back to index.html -->
+
         <p>Already have an account? <a href="index.html">Login here</a></p>
     </div>
 </body>

@@ -6,63 +6,72 @@
     <title>Voting System</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-h2 {
-    color: #333;
-    margin-bottom: 20px;
-}
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-form {
-    margin-bottom: 20px;
-}
+        form {
+            margin-bottom: 20px;
+        }
 
-label {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
 
-input[type="radio"] {
-    margin-right: 10px;
-}
+        input[type="radio"] {
+            margin-right: 10px;
+        }
 
-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-button[type="submit"] {
-    background-color: #28a745;
-    margin-right: 10px;
-}
+        button[type="submit"] {
+            background-color: #28a745;
+            margin-right: 10px;
+        }
 
-button[type="submit"]:hover,
-button[type="submit"]:focus,
-button[type="submit"]:active {
-    background-color: #218838;
-}
+        button[type="submit"]:hover,
+        button[type="submit"]:focus,
+        button[type="submit"]:active {
+            background-color: #218838;
+        }
 
-button[type="submit"]:last-child {
-    margin-right: 0;
-}
+        button[type="submit"]:last-child {
+            margin-right: 0;
+        }
 
+        form[action="logout.php"] button[type="submit"] {
+            background-color: #dc3545;
+        }
+
+        form[action="logout.php"] button[type="submit"]:hover,
+        form[action="logout.php"] button[type="submit"]:focus,
+        form[action="logout.php"] button[type="submit"]:active {
+            background-color: #c82333;
+        }
     </style>
 </head>
 <body>
@@ -70,9 +79,9 @@ button[type="submit"]:last-child {
         <h2>Welcome to the Voting System</h2>
         <form action="submit_vote.php" method="post">
             <label for="candidate1">Alexander Stub:</label>
-            <input type="radio" id="candidate1" name="candidate" value="candidate1">
+            <input type="radio" id="candidate1" name="candidate" value="candidate1"> 
             <label for="candidate2">Pekka Haavisto:</label>
-            <input type="radio" id="candidate2" name="candidate" value="candidate2">
+            <input type="radio" id="candidate2" name="candidate" value="candidate2"> 
             <button type="submit">Submit Vote</button>
         </form>
         <form action="logout.php" method="post">

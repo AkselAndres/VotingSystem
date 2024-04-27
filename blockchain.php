@@ -48,6 +48,22 @@ class Blockchain {
     public function getChain() {
         return $this->chain;
     }
+
+    // Add function to log voting transaction to blockchain
+    public function logVoteTransaction($voter, $candidate) {
+        $index = count($this->chain);
+        $previousBlock = $this->chain[$index - 1];
+        $newBlock = array(
+            'index' => $index,
+            'timestamp' => time(),
+            'data' => array(
+                'voter' => $voter,
+                'candidate' => $candidate
+            ),
+            'previousHash' => $this->calculateHash($previousBlock)
+        );
+        $this->chain[] = $newBlock;
+    }
 }
 
 ?>
